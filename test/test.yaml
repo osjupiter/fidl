@@ -1,0 +1,24 @@
+- records
+  - name: struct1
+    values:
+    - left
+    - middle
+    -right
+  - name: struct2
+    values:
+    - left
+    - middle
+    -right
+  - name: struct3
+    values:
+    - left
+    - middle
+    - right
+- dependency
+  - value: struct2.left
+    depends: struct1.middle
+  - value: struct3.left
+    depends: struct2.right
+  - value: struct3.middle
+    depends: struct2.right
+
