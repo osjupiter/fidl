@@ -1,0 +1,24 @@
+
+record struct1{
+    left
+    middle
+    right
+}
+record struct2{
+    left
+    middle
+    right
+}
+record struct3{
+    left
+    middle
+    right
+}
+
+
+struct1.left <- struct2.middle
+
+usecase(a struct3, b struct2){
+    a.left <- middle
+    a.right <- b.middle
+}

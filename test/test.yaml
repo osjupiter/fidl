@@ -1,4 +1,4 @@
-- records
+- records:
   - name: struct1
     values:
     - left
@@ -14,11 +14,14 @@
     - left
     - middle
     - right
-- dependency
+- dependency:
   - value: struct2.left
     depends: struct1.middle
-  - value: struct3.left
-    depends: struct2.right
-  - value: struct3.middle
-    depends: struct2.right
+- usecase:
+    left: struct3
+    right: struct2
+    dependency:
+    - left: right
+    - middle: right
+
 
